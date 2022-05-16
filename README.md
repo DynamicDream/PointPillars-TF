@@ -4,15 +4,16 @@
 ```
    1.model.h5文件放到项目目录中新建的logs文件夹下
    2.在执行python setup.py install之前,需要将pybind11下载解压到项目中的pybind11文件夹中
-   3.若执行python setup.py install时，报错未定义M_PI,此时,将src文件夹中的point_pillars.cpp打开,并预定义#define M_PI 3.1415926即可
-   4.执行python point_pillars_inference.py  --data_root=/media/data/kitti-3d/kitti/testing  --result_dir=./results/ --model_path=./logs/model.h5时,
+   3.若执行python setup.py install时，报错未定义M_PI,此时,将src文件夹中的 point_pillars.cpp 打开,并预定义#define M_PI 3.1415926 即可
+   4.执行python point_pillars_inference.py  --data_root=/media/data/kitti-3d/kitti/testing  --result_dir=./results/ --model_path=./logs/model.h5 时,
    可能报错，修改--data_root=/media/data/kitti-3d/kitti/testing 为 --data_root=./media/data/kitti-3d/kitti/testing
    5.测试集需要在项目目录下创建\media\data\kitti-3d\kitti\testing，并且按照
    └── testing     <-- 7580 test data
            ├── calib
            ├── velodyne
-           ├── imag_2的形式创建
-   6.若报错内容为zlibwapi.dll错误，按照:https://blog.csdn.net/qq_45071353/article/details/124091856 解决
+           ├── imag_2
+    的形式创建
+   6.若报错内容为zlibwapi.dll相关错误,请按照:https://blog.csdn.net/qq_45071353/article/details/124091856 解决
    7.若报错内容为Could not load library cudnn_cnn_infer64_8.dll.则查看是否CUDA版本为11.5,此时的cudNN不能用官方给的匹配版本,需要按照CUDA11.4的版本下载cudNN
 ```
 
