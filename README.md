@@ -5,7 +5,8 @@
    1.model.h5文件放到项目目录中新建的logs文件夹下
    2.在执行python setup.py install之前,需要将pybind11下载解压到项目中的pybind11文件夹中
    3.若执行python setup.py install时，报错未定义M_PI,此时,将src文件夹中的point_pillars.cpp打开,并预定义#define M_PI 3.1415926即可
-   4.执行python point_pillars_inference.py  --data_root=/media/data/kitti-3d/kitti/testing  --result_dir=./results/ --model_path=./logs/model.h5时,可能报错，修改--data_root=/media/data/kitti-3d/kitti/testing为--data_root=./media/data/kitti-3d/kitti/testing
+   4.执行python point_pillars_inference.py  --data_root=/media/data/kitti-3d/kitti/testing  --result_dir=./results/ --model_path=./logs/model.h5时,
+   可能报错，修改--data_root=/media/data/kitti-3d/kitti/testing 为 --data_root=./media/data/kitti-3d/kitti/testing
    5.测试集需要在项目目录下创建\media\data\kitti-3d\kitti\testing，并且按照
    └── testing     <-- 7580 test data
            ├── calib
